@@ -42,7 +42,7 @@ db.getCollection('restaurants').find({ "address.street": "Broadway" }, { name:  
 // 8. Provide a query showing the 5 pizza restaurants in the Bronx with the highest
 // score on an evaluation.
 
-db.restaurants.find({ "borough": "Bronx" }).sort({ "grades.score": -1 }).limit( 5 )
+db.restaurants.find({ cuisine: "Pizza", "borough": "Bronx" }).sort({ "grades.score": -1 }).limit( 5 )
 db.getCollection('restaurants').find({ "borough": "Bronx" }).sort({ "grades.score": -1 }).limit( 5 )
 
 // 9. Provide a query to find all of the restaurants in Brooklynn and list only the
